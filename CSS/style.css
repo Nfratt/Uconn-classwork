@@ -1,0 +1,56 @@
+.rotate90 {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+body{
+    background-color: #efeee7;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: #333333
+
+}
+
+h1{
+    color: #eee;
+    font-size: 28px;
+}
+h2{
+    font-size: 24px
+}
+
+.container{
+    width: 1024px;
+    margin:0 auto;
+}
+#main-bio,
+#contact-info,
+#bio-img{
+    float: left;
+}
+
+#bio-img{
+    width: 200px;
+    padding: 0 8px 0 0 ;
+
+}
+
+#contact-info{
+    width: 30%;
+}
+#main-bio{
+    width: 70%;
+    line-height: 1.5em;
+}
+
+a{
+    color: red
+}
