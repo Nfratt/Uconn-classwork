@@ -1,0 +1,33 @@
+body{
+    background: cadetblue;
+}
+#content{
+    background: whitesmoke;
+    width: 600px;
+    margin: auto;
+    padding: 20px;
+}
+#adds{
+    position: relative;
+    height: 90px;
+    background: red
+}
+#add2{
+    position: absolute;
+    height: 50px;
+    width: 35%;
+    background: pink;
+    margin-left: 75%;
+    margin-bottom: -10px
+
+}
+#fixedadd{
+    position: fixed;
+    height: 155px;
+    width: 255px;
+    top: 10px;
+    left: 2px;
+    color: white;
+    background: darkblue;
+    border: 1px dashed whitesmoke;
+}
