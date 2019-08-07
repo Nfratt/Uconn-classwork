@@ -1,0 +1,28 @@
+diff b/w section and div div u se to always be used html 5 prefers semantic tags (Aside,artical nav)(blocks)
+<header>
+Defines a header for a document or a section
+<nav>
+Defines a container for navigation links
+<section>
+Defines a section in a document
+<article>
+Defines an independent self-contained article
+<footer>
+Defines a footer for a document or a section
+<details>
+Defines additional details
+<summary>
+Defines a heading for the <details> element
+section tags are semantic tags
+divs are more general
+classes multiple and use again
+id unique only used once in code
+Nick Frattaroli 8:02 PM
+Css resets:
+takes all of default css and gets rid of it
+aka wipes out browser based CDD
+CSS*
+Nick Frattaroli 8:17 PM
+CDN: content delivery network
+use to build on work of others
+leagaly
