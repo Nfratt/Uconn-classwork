@@ -1,5 +1,8 @@
-p{
+p:hover{
+    color: red;
     font-family: 'Beth Ellen','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+p {font-family: 'Beth Ellen','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 p.important{
     font-weight: bold;
@@ -9,4 +12,30 @@ p.enlarge{
 }
 .blurb3{ 
     line-height: 50px
+}
+
+a:active{
+    background: yellow
+
+}
+
+#email{
+    display: block;
+    font-weight: bold;
+    color: blueviolet;
+    background: antiquewhite;
+    font-size: 3em;
+
+}
+button{
+    opacity: 50%;
+}
+button:hover{
+    opacity: 100%;
+    box-shadow: 0px 0px 10px 0px aqua; 
+
+}
+
+button:active{
+    background-color: black
 }
