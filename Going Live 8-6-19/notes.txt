@@ -26,3 +26,11 @@ Nick Frattaroli 8:17 PM
 CDN: content delivery network
 use to build on work of others
 leagaly
+static websites: plain html doesnt change nothing serverside for updates
+Github is a freehost provider
+but only works in static page
+steps to make a static page on github
+1; make a repo
+yourname.github.io
+
+https://gitignore.org/gitignore.html#stata
