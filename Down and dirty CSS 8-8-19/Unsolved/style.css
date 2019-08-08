@@ -15,14 +15,21 @@ p.enlarge{
 }
 
 a:active{
-    background: yellow
+    background: orange
 
+}
+
+a:link{
+    background:pink
+}
+a{
+    font-size: 200%
 }
 
 #email{
     display: block;
     font-weight: bold;
-    color: blueviolet;
+    color: grey;
     background: antiquewhite;
     font-size: 3em;
 
@@ -33,7 +40,6 @@ button{
 button:hover{
     opacity: 100%;
     box-shadow: 0px 0px 10px 0px aqua; 
-
 }
 
 button:active{
