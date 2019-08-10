@@ -1,3 +1,4 @@
+https://docs.google.com/presentation/d/1HzKNYBOJXqWIQx90arTHqR3wISSrX0MDuBId0dP7rak/edit#slide=id.g406ab4c8e3_2_642
 grids
 12-16 collums
 Wireframing Tools:
@@ -11,3 +12,4 @@ GuideGuide: https://guideguide.me/
 Designing with Grids Guides: 
 960 Grid System Made Easy: http://bit.ly/1sjYaFC   ***
 Designing with Grid-Based Approach: http://bit.ly/1CM4Hzo 
+
