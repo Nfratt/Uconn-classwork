@@ -1,0 +1,14 @@
+(Golden Ratio of 1.5x font) line height:
+
+sarif vs sans sarif
+adds tais -no tails 
+ google fonts 
+https://fonts.google.com/
+
+psudo syles 
+anything that follows <--:active>
+ link= not yet visited
+ button states 
+
+if you dont want to use css you can use bootstrap
+
