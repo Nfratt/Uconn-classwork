@@ -1,0 +1,10 @@
+JS is untyped language- no need for string,int,
+use console for js
+for double quotes use / to keep the "" in the string
+boulion =true or false
+ in js -1= not found
+
+== test if two things are equal to each other 
+
+=== true test
+!= not equals 
