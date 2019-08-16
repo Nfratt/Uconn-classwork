@@ -1,0 +1,10 @@
+     Concatination
+ // Won't work as expected
+      alert(catAge + 2);
+thinks its a string  (122)
+      // Works as expected
+      alert(parseInt(catAge) + 2);
+knows its a number (12+2)=14
+Dry:dont repeat yourself
+
+<div class=“fixedFooter” style=“position:fixed; height: 50px; width: 100%; background-color: beige; bottom: 0vh;“></div>
