@@ -1,0 +1,3 @@
+scope= the area inside the brackets 
+callback=
+function passing into another funcion 
