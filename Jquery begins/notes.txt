@@ -1,1 +1,30 @@
 slides: https://docs.google.com/presentation/d/1Lwg5wWQ5n0eM8Krswo8ARc2g-p5FqyL_WK6nKb93H8U/edit#slide=id.g406bb905c8_2_26
+DOM control ex document.write 
+jquery is like bootstrap and is a library for DOM selectors 
+DOM manipulation through java script 
+
+get doc by id returns one 
+get doc by class returns arrey 
+doc. create element 
+.append child= add to a div 
+sorce is the innital html 
+inspector is the latest state 
+
+.set attribute "class, name"
+property is the part after the period 
+method is a type of property 
+block elements occumy an entire row by itself (divs) (ps)(section) (nav)
+inline wrap with text  (img)(btn)
+rem vs em
+rem mobile and scalable 
+desktop 
+px =static 
+ library is a colection of functions (jquery)
+framework 
+code base that lets u build a application with precreated code (bootstrap)
+$selector 
+$('click me')
+JQ link(yes its the same from bootstrap)
+<script src=“https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js“></script>
+
+chaining combining .commands
