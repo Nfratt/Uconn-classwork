@@ -1,2 +1,7 @@
 jqery in documentation = $
 https://docs.google.com/presentation/d/1HGGgBSOSRHWbBvRvp75tJO5NiVI040J8YVik0RFPleg/edit#slide=id.g406b1f0b09_2_180
+lexical scope "what does it mean?"
+how far does the scope go 
+scope{the area that we are working in}
+this= is in reference to the scope you are in in Js
+in jquarey its in referance to the element you are working in/ the object being worked on.

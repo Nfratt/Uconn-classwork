@@ -1,0 +1,6 @@
+other libs:
+moment js
+lo dash 
+highcharts or d3 (charts graphs)
+observable hq
+
