@@ -62,7 +62,9 @@
         <div class="card">
           <h3 class="card-header">Result</h3>
           <div class="card-body">
-            <h1 id="first-number"></h1>
+            <h1 id="first-number">
+         
+            </h1>
             <h1 id="operator"></h1>
             <h1 id="second-number"></h1>
             <hr>
@@ -78,6 +80,70 @@
 $(document).ready(function() {
 
 // Your code here...
+var numb1 = '';
+var numb2 = '';
+var operation = null;
+
+var numbs = $('.number');
+numbs.on('click', function() {
+  var numb = this.value;
+  numb1 += numb;
+  var numbBox = $("#first-number");
+  numbBox.html(numb1);
+  // if (!operation){
+
+  // }
+
+  console.log(this.value);
+});
+
+var ops = $('.operator');
+ops.on('click', function(evt) {
+  var opsBox = $("#operator");
+  switch(this.value){
+    case 'plus':
+    opsBox.html ('+')
+    break;
+    case 'minus':
+    opsBox.html('-')
+    break;
+    case'divide':
+    opsBox.html ('/')
+    break;
+    case'times':
+    opsBox.html('*')
+    break;
+    case'power':
+    opsBox.html ('^')
+    break;
+  }
+
+  var opsBox = $("#operator");
+  console.log(this.value)
+  // numbBox.html(numb1);
+  
+ 
+});
+
+var eqls =$('.equal');
+eqls.on('click',function(evt){
+ console.log(this.value);
+ num1=parseInt(numb1);
+ numb2=parseInt(num2)
+ var results =''
+//  switch(ops){
+//    case plus:
+//    results = numb1+numb2
+//    break;
+  
+//  }
+ 
+});
+
+var clear=$('.clear');
+clear.on('click',function(evt){
+  console.log(this.value)
+});
 
 
 
