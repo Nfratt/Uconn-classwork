@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en us">
+
+<head>
+   <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+      <script>
+         function vowls(str) {
+            var vowel_list = 'AEIOUaeiou';
+            var vcount = 0;
+      
+            for (var x = 0; x < str.length; x++) {
+               if (vowel_list.indexOf(str[x]) !== -1) {
+                  vcount += 1;
+               }
+      
+            }
+            return vcount;
+         }
+         console.log(vowls("a"));
+      
+      </script>
+
+</body>
+
+</html>
