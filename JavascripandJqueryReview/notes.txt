@@ -1,0 +1,4 @@
+jquery 
+$(#divid)
+javascript
+=getelementid (divid)
