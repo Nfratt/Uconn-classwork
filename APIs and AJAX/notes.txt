@@ -1,9 +1,19 @@
 AJAX: asyncronous javascipt
 XHR: xml http request
-JSON:Javascript object notation;
+JSON:Javascript object notation;(format used to transmit data
 API:Application Programing Interface;(entry point into a database)
 example of an api call http://www.omdbapi.com/?t=Lord+of+the+Rings&apikey=trilogy#
 https://api.jquery.com/jquery.ajax/#jQuery-ajax-url-settings
+iftt if this than that:
+convienince methods:
+get requests:
+.get JSON
+what two parameters do we pass inot ajax to retrive data from online:
+url and method; ie (get)
+
+
+
+
 
 
 
