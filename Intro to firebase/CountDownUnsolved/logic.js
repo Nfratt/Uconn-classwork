@@ -4,15 +4,15 @@
 
 // Create a variable to reference the database
 // Your web app's Firebase configuration
-var firebaseConfig = {
-  apiKey: "AIzaSyB9z-Xxsf4NOVJslAlIw1jE0yR-YWhb2c4",
-  authDomain: "fsfinclass.firebaseapp.com",
-  databaseURL: "https://fsfinclass.firebaseio.com",
-  projectId: "fsfinclass",
-  storageBucket: "",
-  messagingSenderId: "388732962786",
-  appId: "1:388732962786:web:178ed814fd1d2df6955bbb"
-};
+// var firebaseConfig = {
+//   apiKey: "AIzaSyB9z-Xxsf4NOVJslAlIw1jE0yR-YWhb2c4",
+//   authDomain: "fsfinclass.firebaseapp.com",
+//   databaseURL: "https://fsfinclass.firebaseio.com",
+//   projectId: "fsfinclass",
+//   storageBucket: "",
+//   messagingSenderId: "388732962786",
+//   appId: "1:388732962786:web:178ed814fd1d2df6955bbb"
+// };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
@@ -40,7 +40,14 @@ console.log(snapshot)
 // Change the value of our clickCounter to match the value in the database
 var data= snapshot.val();
 // Console Log the value of the clickCounter
-clickCounter=data ? data.countDownCounter:initialValue
+// ternary: shorter if statment;
+// value = test = true? this :this other thing
+clickCounter=data ? data.countDownCounter:initialValue 
+// if (data){
+//  clickcounter = data.Count.DownCounter;
+// }else{
+// clickCounter=initalvalue;
+// }
 console.log(clickCounter)
 // Change the HTML using jQuery to reflect the updated clickCounter value
 $("#click-value").text(clickCounter);
