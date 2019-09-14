@@ -4,15 +4,15 @@
 
 // Create a variable to reference the database
 // Your web app's Firebase configuration
-// var firebaseConfig = {
-//   apiKey: "AIzaSyB9z-Xxsf4NOVJslAlIw1jE0yR-YWhb2c4",
-//   authDomain: "fsfinclass.firebaseapp.com",
-//   databaseURL: "https://fsfinclass.firebaseio.com",
-//   projectId: "fsfinclass",
-//   storageBucket: "",
-//   messagingSenderId: "388732962786",
-//   appId: "1:388732962786:web:178ed814fd1d2df6955bbb"
-// };
+var firebaseConfig = {
+  apiKey: "**************** check google firebase",
+  authDomain: "fsfinclass.firebaseapp.com",
+  databaseURL: "https://fsfinclass.firebaseio.com",
+  projectId: "fsfinclass",
+  storageBucket: "",
+  messagingSenderId: "388732962786",
+  appId: "1:388732962786:web:178ed814fd1d2df6955bbb"
+};
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
