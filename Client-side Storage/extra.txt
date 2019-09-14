@@ -1,0 +1,2 @@
+fat arrow function 
+connectes a function to its element
