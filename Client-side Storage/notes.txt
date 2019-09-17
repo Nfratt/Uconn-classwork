@@ -7,3 +7,24 @@ Input: [ 1, 3, 4, 1, 3, 4 ]
 Output: 1
 Input: [ 2, 4, 5 ]
 Output: undefined.
+look in the for loop
+if any repeat print repeated #
+
+there are more methods for dealing with arrays other than a for loop;
+check on mozilla MDN
+Data Persistance;
+local 
+session 
+cookies -mostly used for adds and add tracking 
+login sessions 
+types of cookies:
+4kb limit
+http:set by server code and user ids are stored 
+javascript: set in client, risky, any Js can pull the info 
+
+Local storage:
+5-10 mb store tons of stuff 
+
+Session sotrage:
+same idea as local but is gone once u close the tab 
+
