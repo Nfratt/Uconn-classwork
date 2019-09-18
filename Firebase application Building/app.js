@@ -1,3 +1,4 @@
+
 var firebaseConfig = {
     apiKey: "AIzaSyBVq4okF_i7quzLM_YyA1fjlyLcZo72R28",
     authDomain: "fsf-inclass-d1f19.firebaseapp.com",
@@ -18,28 +19,37 @@ var monthlyRate = '';
 var totalBilled = '';
 database.ref('empdb/').on('value', function (snapshot) {
     console.log(snapshot.val());
-})
-$("btn-submit").on("click", function (event) {
-    console.log ('working')
+}, function (errorObject) {
+    console.log("The read failed: " + errorObject.code);
+});
+$(".btn-submit").on("click", function (event) {
+    console.log('working');
     // Prevent form from submitting
     event.preventDefault();
     // Get the input values
     var empName = $('#employeename').val().trim();
     var role = $('#role').val().trim();
     var startDate = $('#startdate').val().trim();
-    var role = $('#monthlyrate').val().trim();
+    var monthlyRate = $('#monthlyrate').val().trim();
     console.log(empName);
     console.log(role);
     console.log(startDate);
     console.log(monthlyRate);
+    database.ref('empdb/').push({
+        empName: empName,
+        role: role,
+        startDate: startDate,
+        monthlyRate: monthlyRate
+    });
 });
-database.ref('empdb/').push({
-    empName: empName,
-    role: role,
-    startDate: startDate,
-    monthlyRate: monthlyRate
+database.ref().on("child_added", function (childSnapshot) {
+    console.log(childSnapshot.val().empName);
+    console.log(childSnapshot.val().role);
+    console.log(childSnapshot.val().startDate);
+    console.log(childSnapshot.val().monthlyRate);
+    $('<tr>').appendTo('.table');
+    $('<td>').appendTo('tr');
+    $('<td>').appendTo('tr');
+    $('<td>').appendTo('tr');
+    $('<td>').appendTo('tr');
 });
-
-
-
-
