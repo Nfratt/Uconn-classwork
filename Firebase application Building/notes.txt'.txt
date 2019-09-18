@@ -1,0 +1,22 @@
+var a = 1;
+function outer(){
+    var a = 2;
+    function inner(){
+        a++;
+   console.log(a);
+        var a = 5;
+    }
+    inner();
+}
+outer();
+
+none b/c hoisting 
+"what is hoisting"?
+only the var declation is hoisted 
+where as the var a =5 is not
+ answer is NaN
+hoisting variables: a variable can be declared after it has been used;
+try to use let or const over var 
+var: declares 
+ let: can be changed at anytime down the line
+const: cannot 
