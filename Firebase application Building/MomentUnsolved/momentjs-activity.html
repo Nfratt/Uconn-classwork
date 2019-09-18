@@ -19,7 +19,7 @@
 
 
   <script>
-    var randomDate = "02/23/1999";
+    var randomDate = "06/17/1996";
     var today = "09/17/2019"
     console.log(moment().format("DD/MM/YY hh:mm A"));
 
@@ -31,7 +31,7 @@
     console.log(moment(randomDate).format("ddd, hA"));
     console.log(moment(randomDate).format());
     // 2 ...to determine the time in years, months, days between today and the randomDate
-    console.log(moment(randomDate.diff(today,'days')));
+    console.log(moment(today).diff(randomDate,'days'),"days");
     // 3 ...to determine the number of days between the randomDate and 02/14/2001
     // 4 ...to convert the randomDate to unix time (be sure to look up what unix time even is!!!)
     // 5 ...to determine what day of the week and what week of the year this randomDate falls on.
