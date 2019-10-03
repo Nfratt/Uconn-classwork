@@ -1,0 +1,6 @@
+
+var day = ["monday", "tuesday", "wed", "thur", "fri", "sat", "sun"];
+ChooseDay = function(arg) {
+   pickDay = arg - 1;
+   return day[pickDay];
+}
