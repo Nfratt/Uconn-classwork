@@ -1,4 +1,5 @@
 // Core node package for reading and writing files
+// this is how you write files to a folder 
 const fs = require('fs')
 
 // This block of code will create a file called "movies.txt".

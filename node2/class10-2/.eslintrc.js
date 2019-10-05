@@ -22,5 +22,6 @@ module.exports = {
     'prefer-arrow-callback': 'off',
     'no-console': 'off',
     'comma-dangle': 'off'
+    
   },
 };
