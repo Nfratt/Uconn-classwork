@@ -1,0 +1,11 @@
+
+var day = ["monday", "tuesday", "wed", "thur", "fri", "sat", "sun"];
+ChooseDay = function(arg) {
+   pickDay = arg - 1;
+   return day[pickDay];
+}
+mongo express react node
+ node is asyncronous
+argv used for test passwords and test users/
+labeling environments
+ vs code can use variables in a nother js file as long as they are in the same folder. with the export feature(ess.js)
