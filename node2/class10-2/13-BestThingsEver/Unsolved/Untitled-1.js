@@ -15,8 +15,10 @@ fs.readFile('Unsolved/best_things_ever.txt', 'utf8', function (error, data) {
 
   // Then split it by commas (to make it more readable)
   const dataArr = data.split(',')
+//   map should be used to transform an array
   .map((it) => it.trim())
   .sort()
+//   foreach to console log
   .forEach((it) => console.log(it))
   
 
