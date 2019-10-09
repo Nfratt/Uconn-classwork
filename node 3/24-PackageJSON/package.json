@@ -1,8 +1,18 @@
 {
-  "name": "weatherd",
-  "version": "1.0.0",
-  "description": "## File",
+  "name": "weather-dest",
+  "version": "0.0.1-alpha",
+  "description": "get the weather",
   "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "weather",
+    "toast",
+    "eggs"
+  ],
+  "author": "nick frattaroli",
+  "license": "MIT",
   "dependencies": {
     "node-geocoder": "^3.24.0",
     "weather-js": "^2.0.0"
@@ -10,10 +20,5 @@
   "devDependencies": {
     "eslint": "^6.5.1",
     "eslint-config-google": "^0.14.0"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "colin",
-  "license": "ISC"
+  }
 }

@@ -14,7 +14,7 @@ const weather = require('weather-js');
 // Replace with your mapquest consumer API key
 const options = {
   provider: 'mapquest',
-  apiKey: 'YOUR-MAPQUEST-API-CONSUMER-KEY',
+  apiKey: 'cf3C9PoSurZ7GXxGiFjHuZPSvNwC1F6g',
 };
 
 const geocoder = nodeGeocoder(options);
@@ -28,7 +28,7 @@ geocoder.geocode(address, function(err, data) {
   console.log(JSON.stringify(data[0], null, 2));
 
   const gAddress = data[0];
-
+  console.log(gAddress);
   // Depending on what information is available for an address,
   // build formatted search
   let search = '';

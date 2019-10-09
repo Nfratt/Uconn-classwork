@@ -1,4 +1,5 @@
 // Load the NPM Package inquirer
+// this is all done beause of inquirer
 const inquirer = require('inquirer');
 
 // Create a "Prompt" with a series of questions.
