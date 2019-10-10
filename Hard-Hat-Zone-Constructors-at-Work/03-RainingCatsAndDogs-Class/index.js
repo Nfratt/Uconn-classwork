@@ -1,13 +1,16 @@
-
 /**
+//  * this way is the most modern way of achiveing the same node outputs;/
  * moder class with the ".raining", ".noise",
  * and ".makenoise" properties
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
  */
 class Animal {
   /**
+  //  * machine readable documentation
    * @property {bool} isRaining
    */
+  // makes another property for isRaining
+  // eslint-disable-next-line require-jsdoc
   get isRaining() {
     return this.raining;
   }
