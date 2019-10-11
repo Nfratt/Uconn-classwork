@@ -67,6 +67,8 @@ Tom1.play();
 Tom1.Hungry=true;
 Tom1.feed();
 Tom1.PrintStats();
+class Dog extends DigitalPal {}
+Dog.Hungry();
 // const Dog = new DigitalPal(
 //     false,
 //     true,
