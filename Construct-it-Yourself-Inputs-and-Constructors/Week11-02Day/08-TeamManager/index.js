@@ -96,6 +96,7 @@ const addPlayer = function() {
 
 // call askquestion to run our code
 addPlayer();
+// randnum=math.random(1)
 // const fillstarters= function() {
 //   addPlayer(2, starters);
 // };
@@ -105,3 +106,7 @@ addPlayer();
 //   fillstarters(2);
 //   fillsubs(1);
 // };
+// const playgame=function()
+// if countg <5
+//      run playgame offence 1-defense 2
+//
