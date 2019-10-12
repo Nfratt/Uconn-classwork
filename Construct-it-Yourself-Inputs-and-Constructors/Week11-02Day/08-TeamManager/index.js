@@ -69,9 +69,11 @@ const addPlayer = function() {
     }, {
       name: 'offense',
       message: 'whats  their offense score',
+      type: 'number',
     }, {
       name: 'defense',
       message: 'Whats their defense score?',
+      type: 'Number',
     },
   ]).then((answers) => {
     // initializes the variable newProgrammer
@@ -93,7 +95,20 @@ const addPlayer = function() {
     addPlayer();
   });
 };
+// let score=0
+// const playgame=function(count,rounds){
+//     if (count==rounds){return;}
+//     const rando=()=> Math.ceil(math.random()*21);
+//     const off= rando();
+//     const def = rando();
+//     const offstat=team.reduce((sum,it)=>sum+it.offense);
+//     const defstat=team.reduce((sum,it)=> sumt+it.defense);
+//     if (off<offstat)score++;
+//     if (def>defstat)score--;
+//     return score
+// };
 
+// }
 // call askquestion to run our code
 addPlayer();
 // randnum=math.random(1)
@@ -107,6 +122,21 @@ addPlayer();
 //   fillsubs(1);
 // };
 // const playgame=function()
+//
 // if countg <5
 //      run playgame offence 1-defense 2
-//
+//  if postitve
+// math .rand >1 offence++
+// math.rand <1 defense++
+// score++
+// countg ++
+// if neg
+// math. rand>1 offense --
+// math.rand <1 defense --
+// score --
+//  if score==o
+// countg++
+// run play game again
+// create extra question on weather or not somone is
+// a sub then person.push them to the correct array based on the answer
+
