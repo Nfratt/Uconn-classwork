@@ -150,5 +150,3 @@ addPlayer();
 // create extra question on weather or not somone is
 // use a checkbox or confirm
 // a sub then person.push them to the correct array based on the answer
-
-
