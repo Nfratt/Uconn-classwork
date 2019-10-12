@@ -37,7 +37,7 @@ let count = 0;
 
 const askQuestion = function() {
   // if statement to ensure that our questions are only asked five times
-  if (count >= 5) {
+  if (count == 5) {
     console.log('All questions asked');
     return;
   }
