@@ -3,7 +3,7 @@
 const inquirer = require('inquirer');
 
 /**
- * A programmer person
+ * A player on the team
  */
 class Player {
   /**
@@ -14,11 +14,12 @@ class Player {
    * @param {number} offense 0 -10
    * @param {number} defense 0-10
    */
-  constructor(name, position, offense, defense) {
+  constructor(name, position, offense, defense, starter) {
     this.name = name;
     this.position = position;
     this.offense = offense;
     this.defense = defense;
+    this.starter=true;
   }
 
   /**
@@ -30,6 +31,7 @@ class Player {
       Position: ${this.position}
       offense: ${this.offense}
       defense: ${this.defense}
+      starter:${this.starter}
 
     `);
     // const starters=[];
@@ -73,7 +75,13 @@ const addPlayer = function() {
     }, {
       name: 'defense',
       message: 'Whats their defense score?',
-      type: 'Number',
+      type: 'number',
+
+    }, {
+      name: 'starter',
+      message: 'is the person a starter?',
+      type: 'confirm',
+      // if no than starter becomes false
     },
   ]).then((answers) => {
     // initializes the variable newProgrammer
@@ -83,7 +91,8 @@ const addPlayer = function() {
         answers.name,
         answers.position,
         answers.offense,
-        answers.defense
+        answers.defense,
+        answers.starter
     );
 
     // add the new Programmer to the answers array
@@ -111,6 +120,7 @@ const addPlayer = function() {
 // }
 // call askquestion to run our code
 addPlayer();
+
 // randnum=math.random(1)
 // const fillstarters= function() {
 //   addPlayer(2, starters);
@@ -138,5 +148,7 @@ addPlayer();
 // countg++
 // run play game again
 // create extra question on weather or not somone is
+// use a checkbox or confirm
 // a sub then person.push them to the correct array based on the answer
+
 
