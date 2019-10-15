@@ -150,3 +150,8 @@ addPlayer();
 // create extra question on weather or not somone is
 // use a checkbox or confirm
 // a sub then person.push them to the correct array based on the answer
+// if you use f2 with a portion or var selected it changes acorss the whole file
+//
+// after a score change ask the user do you want
+//  to swap a sub in in order to possibly beat the enamy team
+
