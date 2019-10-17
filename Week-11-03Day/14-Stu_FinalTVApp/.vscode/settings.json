@@ -6,5 +6,5 @@
     "debug.node.autoAttach": "on",
     "editor.tabSize": 2,
     "editor.autoIndent": true,
-    "workbench.panel.defaultLocation": "right"
+    "workbench.panel.defaultLocation": "bottom"
 }
