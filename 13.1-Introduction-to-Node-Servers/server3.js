@@ -1,4 +1,5 @@
 var http = require("http");
+const fs =require("fs")
 
 var PORT = 8080;
 
@@ -71,3 +72,7 @@ function display404(url, res) {
   // End the response by sending the client the myHTML string (which gets rendered as an HTML document thanks to the code above)
   res.end(myHTML);
 }
+// FS test
+fs.readFile(__dirname+"/index.html",function(err,data){
+
+})
