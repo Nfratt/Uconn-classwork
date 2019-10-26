@@ -6,7 +6,8 @@ var app = express();
 var PORT = 3000;
 
 // Data
-const characters = [{
+// ===========================================================
+var characters = [{
   routeName: "yoda",
   name: "Yoda",
   role: "Jedi Master",
@@ -21,31 +22,38 @@ const characters = [{
 }, {
   routeName: "obiwankenobi",
   name: "Obi Wan Kenobi",
-  role: "Jedi Knight",
-  age: 60,
+  role: "Jedi Master",
+  age: 55,
   forcePoints: 1350
 }];
 
 // Routes
 // ===========================================================
+
 app.get("/", function(req, res) {
   res.send("Welcome to the Star Wars Page!");
 });
 
-app.get("/:character", function(req, res) {
-  var chosen = req.params.character;
+// What does this route do?
+app.get("/api/characters", function(req, res) {
+  return res.json(characters);
+});
 
-  // What does this log?
+// What does this route do?
+app.get("/api/characters/:character", function(req, res) {
+  // What does this code do?
+  var chosen = req.params.character;
   console.log(chosen);
-  const data =characters.find(it=>it.routeName==chosen)
-  if (data) return res.json(data)
-  return res.json({sucess:false})
-  //  can also add a return here
-  
-  // res.json({
-  // sucess:!!data,
-  // character:data
-// )};
+
+  // What does this code do?
+  for (var i = 0; i < characters.length; i++) {
+    if (chosen === characters[i].routeName) {
+      return res.json(characters[i]);
+    }
+  }
+
+  // What does this code do?
+  return res.send("No character found");
 });
 
 // Listener
