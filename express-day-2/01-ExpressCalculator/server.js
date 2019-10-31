@@ -44,7 +44,7 @@ app.get('/:operand/:firstnumber/:secondnumber', function(req, res) {
       break;
     case 'divide':
     // Divide
-      // result= first/second;
+      result= first/second;
       break;
     default:
     // Handle anything that isn't specified
