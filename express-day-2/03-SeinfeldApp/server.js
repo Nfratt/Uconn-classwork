@@ -42,8 +42,7 @@ app.get('/', async function(req, res) {
   res.send(html);
 });
 app.get('/coolness', async function(req, res) {
-  // If the main route is hit, then we initiate a SQL query to grab all records.
-  // All of the resulting records are stored in the variable "result."
+
   const result = await connection.query('SELECT * FROM actors ORDER BY coolness_points Desc');
 
   // We then begin building out HTML elements for the page.
@@ -52,7 +51,6 @@ app.get('/coolness', async function(req, res) {
   // Here we begin an unordered list.
   html += '<ul>';
 
-  // We then use the retrieved records
   // from the database to populate our HTML file.
   for (let i = 0; i < result.length; i++) {
     html += '<li><p>name: ' + result[i].name + ' </p>';
