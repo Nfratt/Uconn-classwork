@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 // Dependencies
 require('dotenv').config();
 const express = require('express');
@@ -40,6 +41,59 @@ app.get('/', async function(req, res) {
   // Finally we send the user the HTML file we dynamically created.
   res.send(html);
 });
+app.get('/coolness', async function(req, res) {
+  // If the main route is hit, then we initiate a SQL query to grab all records.
+  // All of the resulting records are stored in the variable "result."
+  const result = await connection.query('SELECT * FROM actors ORDER BY coolness_points Desc');
+
+  // We then begin building out HTML elements for the page.
+  let html = '<h1> SEINFLED coolness </h1>';
+
+  // Here we begin an unordered list.
+  html += '<ul>';
+
+  // We then use the retrieved records
+  // from the database to populate our HTML file.
+  for (let i = 0; i < result.length; i++) {
+    html += '<li><p>name: ' + result[i].name + ' </p>';
+    html += '<p> ID: ' + result[i].id + '</p>';
+    html += '<p>coolness: ' + result[i].coolness_points + ' </p></li>';
+    // html += '<p>attitude ' + result[i].attitude + ' </p></li>';
+  }
+
+  // We close our unordered list.
+  html += '</ul>';
+
+  // Finally we send the user the HTML file we dynamically created.
+  res.send(html);
+});
+app.get('/attitude', async function(req, res) {
+  // If the main route is hit, then we initiate a SQL query to grab all records.
+  // All of the resulting records are stored in the variable "result."
+  const result = await connection.query('SELECT * FROM actors ORDER BY attitude');
+
+  // We then begin building out HTML elements for the page.
+  let html = '<h1> SEINFLED attitudes </h1>';
+
+  // Here we begin an unordered list.
+  html += '<ul>';
+
+  // We then use the retrieved records
+  // from the database to populate our HTML file.
+  for (let i = 0; i < result.length; i++) {
+    html += '<li><p> ID: ' + result[i].id + '</p>';
+    html += '<p>name: ' + result[i].name + ' </p>';
+    html += '<p>attitude ' + result[i].attitude + ' </p></li>';
+  }
+
+  // We close our unordered list.
+  html += '</ul>';
+
+  // Finally we send the user the HTML file we dynamically created.
+  res.send(html);
+});
+
+
 // Start our server so that it can begin listening to client requests.
 // Once server has started up, set up the DB connection
 app.listen(PORT, async function() {
