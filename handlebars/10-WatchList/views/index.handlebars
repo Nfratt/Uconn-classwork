@@ -6,16 +6,17 @@
     <p>
       {{this.id}}. {{this.movie_name}}
 
-      <button data-movie_nameid="{{this.id}}" class="delmovie_name">Delete movie_name!</button>
+      <button data-movie_nameid="{{this.id}}" 
+      class="delmovie_name">Delete a movie</button>
     </p>
   </li>
   {{/each}}
 </ul>
 
-<h2>add a movie</h2>
+<h2>Add a movie</h2>
 <form id="createmovie_name" class="button-size">
   <textarea type="text" name="movie_name"></textarea>
-  <button type="submit">Save movie_name!</button>
+  <button type="submit">Save a movie!</button>
 </form>
 
 <h2>Update a movie</h2>
@@ -25,8 +26,8 @@
 			<option value="{{this.id}}">{{this.movie_name}}</option>
 		{{/each}}
 	</select>
-  <textarea type="text" name="movie_name" placeholder="movie_name"></textarea>
-  <button type="submit">Update movie_name!</button>
+  <textarea type="text" name="movie_name" placeholder="Movie Name"></textarea>
+  <button type="submit">Update a movie!</button>
 </form>
 
 <script type="text/javascript">
