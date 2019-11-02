@@ -46,7 +46,7 @@ app.get('/dog', (req, res) => {
   // Handlebars requires an object to be sent to the dog.handlebars file.
 
   // Lucky for us, animals[0] is an object!
-  res.render('dog', animals[0]);
+  res.render('dog', animals.find((animal)=>animal.animalType=='dog'));
   // 1. Send the dog object from the animals array to the dog.handlebars file.
 });
 
