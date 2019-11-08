@@ -1,0 +1,5 @@
+SHOW TABLES;
+
+DESCRIBE chirps;
+
+SELECT * FROM `chirps`;

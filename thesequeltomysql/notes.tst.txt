@@ -1,0 +1,5 @@
+Mvc 
+model view controler 
+model: how you set up the data
+view: what the user sees
+controler: the database and how it handles requests

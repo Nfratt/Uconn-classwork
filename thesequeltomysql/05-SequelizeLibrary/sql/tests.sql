@@ -1,0 +1,5 @@
+SHOW TABLES;
+
+DESCRIBE books;
+
+SELECT * FROM `books`;
