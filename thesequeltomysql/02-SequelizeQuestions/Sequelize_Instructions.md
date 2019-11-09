@@ -4,12 +4,16 @@
 
   ```
   	- Answer: What is Sequelize?
-
+	  a node.js ORM for databases like mySQL 
+	orm= OBJECT relational mapping
   	- Answer: What advantages does it offer?
-
+		It features solid transaction support, relations, eager and lazy loading, read replication and more.
   	- Answer: How do I install it? How do I incorporate it into my app?
+		npm install --save sequelize
+		$ npm install --save mysql2
 
   	- Answer: What the heck is a Sequelize model? What role will it play?
+	  	A representation of tabel data for sequalize 
 
   	- Answer: Let's say I have the below table in MySQL. 
 
@@ -22,6 +26,23 @@
   		| Zambia      | 260       | Lusaka    | 1964             |
 
   		- How would I model it in Sequelize? 
+		  	<!-- const Model = Sequelize.Model;
+	class User extends Model {}
+	User.init({
+  	// attributes
+  	firstName: {
+    	type: Sequelize.STRING,
+    	allowNull: false
+  	},
+  	lastName: {
+    	type: Sequelize.STRING
+    	// allowNull defaults to true
+  	}
+	}, {
+  	sequelize,
+  	modelName: 'user'
+  	// options
+	}); -->
 
   		- How would I query for all the records where the Independence Year was less than 50 years ago?
 
