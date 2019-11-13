@@ -4,6 +4,7 @@ module.exports = function(app) {
   // Find all Authors and return them to the user with res.json
   app.get('/api/authors', async (req, res) => {
     const data =await db.Author.findAll();
+    include:[db.post];
     res.json(data);
   });
 

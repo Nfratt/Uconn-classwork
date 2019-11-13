@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  const Author = sequelize.define('Post', {
+  const Author = sequelize.define('Author', {
     name: {
       type: DataTypes.STRING,
       allowNull: false,
