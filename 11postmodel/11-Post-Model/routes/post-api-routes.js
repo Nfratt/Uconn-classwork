@@ -13,6 +13,8 @@ const db = require('../models');
 module.exports = function(app) {
   // GET route for getting all of the posts
   app.get('/api/posts', async (req, res) => {
+    const posts =await db.Post.findAll();
+    res.json(posts);
     // Add sequelize code to find all posts, and return them to the user with res.json
   });
 
@@ -31,7 +33,15 @@ module.exports = function(app) {
   // POST route for saving a new post
   app.post('/api/posts', async (req, res) => {
     // Add sequelize code for creating a post using req.body,
-    // then return the result using res.json
+    // then return the result using res.json\
+    const {title, body, category}=req.body;
+    try {
+      const result = await db.Post.create({title, body, category});
+      res.json({id: result.dataValues});
+    } catch (error) {
+      // better error description
+      res.status(400).json({error: {...error.name, msg: error.message}});
+    }
   });
 
   // DELETE route for deleting posts
