@@ -9,5 +9,11 @@ module.exports = function(sequelize, DataTypes) {
     },
 
   });
+
+  Author.associate = function(models) {
+    Author.hasMany(models.Post, {
+      onDelete: 'cascade',
+    });
+  };
   return Author;
 };

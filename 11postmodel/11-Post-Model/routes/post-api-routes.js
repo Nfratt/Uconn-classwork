@@ -34,9 +34,8 @@ module.exports = function(app) {
   app.post('/api/posts', async (req, res) => {
     // Add sequelize code for creating a post using req.body,
     // then return the result using res.json\
-    const {title, body, category}=req.body;
     try {
-      const result = await db.Post.create({title, body, category});
+      const result = await db.Post.create(req.body);
       res.json({id: result.dataValues});
     } catch (error) {
       // better error description
