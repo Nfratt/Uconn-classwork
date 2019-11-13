@@ -1,5 +1,13 @@
-Mvc 
+Mvc: 
 model view controler 
 model: how you set up the data
 view: what the user sees
 controler: the database and how it handles requests
+
+paterns:
+use npm run watch
+always start with a github repo and git ignore 
+
+... spread operator  allows an iterable such as an array expression or string to be expanded
+ in places where zero or more arguments (for function calls) or elements (for array literals) are expected,
+ or an object expression to be expanded in places where zero or more key-value pairs (for object literals) are expected.
