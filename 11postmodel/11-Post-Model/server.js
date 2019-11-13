@@ -29,7 +29,7 @@ require('./routes/author-api-routes')(app);
 // Syncing our sequelize models Starting our Express app
 // =============================================================
 async function startup() {
-  const dbOutput = await db.sequelize.sync({force: true});
+  const dbOutput = await db.sequelize.sync({force: false});
   console.log('----------------------------');
   console.log('DATABASE SERVER CONNECTED');
   console.group('DATABASE CONFIG');

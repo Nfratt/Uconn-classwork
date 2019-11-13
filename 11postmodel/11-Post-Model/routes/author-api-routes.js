@@ -10,7 +10,13 @@ module.exports = function(app) {
 
   app.get('/api/authors/:id', async (req, res) => {
     // Find one Author with the id in req.params.id and return them to the user with res.json
-
+    const data =await db.Author.findAll(
+      {
+      where:{id:req.param.id,
+      include: [db.Post],
+    },
+    
+    res.json(data);
   });
 
   app.post('/api/authors', async (req, res) => {
