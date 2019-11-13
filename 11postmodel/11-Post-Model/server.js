@@ -33,11 +33,11 @@ async function startup() {
   console.log('----------------------------');
   console.log('DATABASE SERVER CONNECTED');
   console.group('DATABASE CONFIG');
-  console.table(dbOutput.config);
+  // console.table(dbOutput.config);
   console.groupEnd();
 
   console.group('DATABASE OPTIONS');
-  console.table(dbOutput.options);
+  // console.table(dbOutput.options);
   console.groupEnd();
 
   await app.listen(PORT);
