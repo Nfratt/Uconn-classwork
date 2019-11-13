@@ -13,8 +13,8 @@ const db = require('../models');
 module.exports = function(app) {
   // GET route for getting all of the posts
   app.get('/api/posts', async (req, res) => {
-    const posts =await db.Post.findAll();
-    res.json(posts);
+    const data =await db.Post.findAll();
+    res.json(data);
     // Add sequelize code to find all posts, and return them to the user with res.json
   });
 
