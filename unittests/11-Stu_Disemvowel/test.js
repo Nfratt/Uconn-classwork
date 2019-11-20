@@ -1,5 +1,6 @@
 var expect = require("chai").expect;
 var disemvowel = require("../11-Stu_Disemvowel/disemvowel");
+var titalize = require("../11-Stu_Disemvowel/titalize")
 
 
 describe("disemvowel", function() {
@@ -19,3 +20,10 @@ describe("disemvowel", function() {
 //     }).to.throw(Error);
 //   });
 });
+describe("titalize", function(){
+  it ("should take a string and capitalize the first letter",function(){
+    expect(titalize('test').to.equal('Test'));
+  });
+  // somthign about turnign a  string capitalizeing 0 to make the 1ts letter capital 
+  // play with more unit testing
+})
