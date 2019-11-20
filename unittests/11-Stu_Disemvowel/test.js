@@ -1,15 +1,21 @@
 var expect = require("chai").expect;
-var disemvowl = require("../disembowel");
+var disemvowel = require("../11-Stu_Disemvowel/disemvowel");
 
 
-describe("disemvowl", function() {
+describe("disemvowel", function() {
   it("should accept a string of lowercased letters and return a version without vowles", function() {
-    expect(disemvowl('test').to.equal("tst"));
+    expect(disemvowel('test').to.equal("tst"));
+  });
+  it("should accept a string of uppercased letters and return a version without vowles", function() {
+    expect(disemvowel('TEST').to.equal("TST"));
+  });
+  it("should accept a string of mixxed case letters and return a version without vowles", function() {
+    expect(disemvowel('TesT').to.equal("TsT"));
   });
 
-  it("should throw when not passed numbers", function() {
-    expect(function() {
-      multiply(2, "4");
-    }).to.throw(Error);
-  });
+//   it("should throw when not passed numbers", function() {
+//     expect(function() {
+//       multiply(2, "4");
+//     }).to.throw(Error);
+//   });
 });
