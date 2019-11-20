@@ -10,7 +10,10 @@ var vowels = ['a', 'e', 'i', 'o', 'u'];
   
 }
 
-disemvowel("Hello Josh");
+disemvowel("TesT");
 
 
 module.exports = disemvowel;
+
+
+
