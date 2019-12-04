@@ -36,7 +36,7 @@ db.students.deleteOne({ name: “Matt ”})
 1. You are worried everyone else will leave and you'll have to sit all alone. You decide to bribe everyone who didn't leave with candy. Add a field of `gavecandy` with a value of false to everyone in the database so you can keep track.
 
 ```
-db.students.update({}, {$set: {“gacecandy”: false}}, false, true)
+db.students.update({}, {$set: {“gavecandy”: false}}, false, true)
 ```
 
 5. All this work made you hungry, so you bought yourself some candy. Change the value of `gavecandy` to `true` in your entry.
