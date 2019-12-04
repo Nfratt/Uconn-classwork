@@ -17,6 +17,8 @@ db.students.update(
 )
 
 db.students.update({ name: “nick”}, {$push:{“hobbies”:“Extreme Basketweaving”}})
+
+db.students.update({ name: “Raf” }, { $push: { hobbies: { $each: [ “gaming”, “hiking”, “cooking” ]}}})
 ```
 
 2. While practicing for your Extreme Basketweaving Competition, you broke the computer of the person next to you. They're using a new Operating System now. Change their os field.
