@@ -5,35 +5,40 @@
 * Go back to your classroom database.
 
 ```
-
+use classroomdb
 ```
 
 1. You've decided to take on a new hobby. Add Extreme Basketweaving to your array of hobbies.
 
 ```
-db.places.update({[hobbies:'extreme basketweaving']})
+db.students.update(
+   { name: "joe" },
+   { $push: { scores: { $each: [ 90, 92, 85 ] } } }
+)
+
+db.students.update({ name: “nick”}, {$push:{“hobbies”:“Extreme Basketweaving”}})
 ```
 
 2. While practicing for your Extreme Basketweaving Competition, you broke the computer of the person next to you. They're using a new Operating System now. Change their os field.
 
 ```
-db.places.update({os: 'pc'})
+db.students.updateOne({ name: “Nick”}, {$set:{“os”:“Mac”}})
 ```
 
 3. Another student in your row saw you break that computer and wisely decided to move. Remove them from your database.
 
 ```
-db.places.matt remove()
+db.students.deleteOne({ name: “Matt ”})
 ```
 
 1. You are worried everyone else will leave and you'll have to sit all alone. You decide to bribe everyone who didn't leave with candy. Add a field of `gavecandy` with a value of false to everyone in the database so you can keep track.
 
 ```
-db.places.push gavecandy
+db.students.update({}, {$set: {“gacecandy”: false}}, false, true)
 ```
 
 5. All this work made you hungry, so you bought yourself some candy. Change the value of `gavecandy` to `true` in your entry.
 
 ```
-
+db.students.updateOne({ name: “nick”}, {$set:{“gavecandy”:true}})
 ```
