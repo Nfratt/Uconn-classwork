@@ -42,5 +42,5 @@ db.students.update({}, {$set: {“gavecandy”: false}}, false, true)
 5. All this work made you hungry, so you bought yourself some candy. Change the value of `gavecandy` to `true` in your entry.
 
 ```
-db.students.updateOne({ name: “nick”}, {$set:{“gavecandy”:true}})
+db.students.updatedis({ name: “nick”}, {$set:{“gavecandy”:true}})
 ```
