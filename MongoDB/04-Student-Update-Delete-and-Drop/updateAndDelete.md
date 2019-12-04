@@ -22,7 +22,7 @@ db.students.update({ name: “nick”}, {$push:{“hobbies”:“Extreme Basketw
 2. While practicing for your Extreme Basketweaving Competition, you broke the computer of the person next to you. They're using a new Operating System now. Change their os field.
 
 ```
-db.students.updateOne({ name: “Nick”}, {$set:{“os”:“Mac”}})
+db.students.updateOne({ name: “raf”}, {$set:{“os”:“pc”}})
 ```
 
 3. Another student in your row saw you break that computer and wisely decided to move. Remove them from your database.
