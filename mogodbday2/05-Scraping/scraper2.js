@@ -9,7 +9,7 @@ console.log('\n******************************************\n' +
 
 async function scrape() {
 // Making a request via axios for `nhl.com`'s homepage
-  const response = axios.get('https://www.nhl.com/');
+  const response = await axios.get('https://www.nhl.com/');
   // Load the body of the HTML into cheerio
   const $ = cheerio.load(response.data);
 
