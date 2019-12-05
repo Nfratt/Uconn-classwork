@@ -1,0 +1,5 @@
+{"_id":{"$oid":"5de84f6339835f4d795250d1"},"name":"fish","class":"fish","numlegs":{"$numberInt":"0"},"weight":{"$numberInt":"1"},"whatIWouldReallyCallIt":"dinner"}
+{"_id":{"$oid":"5de85023d33f674d7979fb9b"},"name":"raccoon","class":"mammal","numlegs":{"$numberInt":"4"},"weight":{"$numberInt":"2"},"whatIWouldReallyCallIt":"thief"}
+{"_id":{"$oid":"5de85047d33f674d7979fb9c"},"name":"mouse","class":"mammal","numlegs":{"$numberInt":"4"},"weight":{"$numberInt":"0"},"whatIWouldReallyCallIt":"pest"}
+{"_id":{"$oid":"5de8506fd33f674d7979fb9d"},"name":"deer","class":"mammal","numlegs":{"$numberInt":"4"},"weight":{"$numberInt":"75"},"whatIWouldReallyCallIt":"jumper"}
+{"_id":{"$oid":"5de850cfd33f674d7979fb9e"},"name":"goose","class":"bird","numlegs":{"$numberInt":"2"},"weight":{"$numberInt":"5"},"whatIWouldReallyCallIt":"wobbler"}
