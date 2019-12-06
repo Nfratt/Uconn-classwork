@@ -15,6 +15,15 @@
   *Bonus*: Write code to set an 'active' state on the column header. It should make the color sorted-by column red.
   *Bonus*: Add additional ways to sort (e.g. by class or number of legs)
 */
+$('#weight-sort').on('click', () => getAnimals('weight'));
+function getAnimals(sortkey) {
+  alert(sortkey);
+}
+
+$('#name-sort').on('click', () => getAnimals('name'));
+function getAnimals(sortkey) {
+  alert(sortkey);
+}
 
 // We'll be rewriting the table's data frequently, so let's make our code more DRY
 // by writing a function that takes in data (JSON) and creates a table body

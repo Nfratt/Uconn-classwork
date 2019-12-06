@@ -59,8 +59,6 @@ app.get('/name', function(req, res) {
   });
 });
 
-
-
 // 2: Weight: Send JSON response sorted by weight in descending order, , e.g. GET "/weight"
 app.get('/weight', function(req, res) {
   // Query: In our database, go to the animals collection, then "find" everything
@@ -74,6 +72,32 @@ app.get('/weight', function(req, res) {
     }
   });
 });
+app.get('/legs', function(req, res) {
+  // Query: In our database, go to the animals collection, then "find" everything
+  db.animals.find().sort({numlegs: 1}, function(err, data) {
+    // Log any errors if the server encounters one
+    if (err) {
+      console.log(err);
+    } else {
+      // Otherwise, send the result of this query to the browser
+      res.json(data);
+    }
+  });
+});
+
+app.get('/class', function(req, res) {
+  // Query: In our database, go to the animals collection, then "find" everything
+  db.animals.find().sort({class: 1}, function(err, data) {
+    // Log any errors if the server encounters one
+    if (err) {
+      console.log(err);
+    } else {
+      // Otherwise, send the result of this query to the browser
+      res.json(data);
+    }
+  });
+});
+
 // Set the app to listen on PORT
 app.listen(PORT, function() {
   console.log('App running on http://localhost:%s', PORT);
