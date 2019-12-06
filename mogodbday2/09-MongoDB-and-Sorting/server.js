@@ -46,7 +46,7 @@ app.get('/api/all', function(req, res) {
 // TODO: Implement the remaining two routes
 
 // 1: Name: Send JSON response sorted by name in ascending order, e.g. GET "/name"
-app.get('/name', function(req, res) {
+app.get('/api/name', function(req, res) {
   // Query: In our database, go to the animals collection, then "find" everything
   db.animals.find().sort({name: 1}, function(err, data) {
     // Log any errors if the server encounters one
@@ -60,7 +60,7 @@ app.get('/name', function(req, res) {
 });
 
 // 2: Weight: Send JSON response sorted by weight in descending order, , e.g. GET "/weight"
-app.get('/weight', function(req, res) {
+app.get('/api/weight', function(req, res) {
   // Query: In our database, go to the animals collection, then "find" everything
   db.animals.find().sort({weight: -1}, function(err, data) {
     // Log any errors if the server encounters one

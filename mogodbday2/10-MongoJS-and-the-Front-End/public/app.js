@@ -16,19 +16,27 @@
   *Bonus*: Add additional ways to sort (e.g. by class or number of legs)
 */
 $('#weight-sort').on('click', () => getAnimals('weight'));
+$('#name-sort').on('click', () => getAnimals('name'));
+
 function getAnimals(sortkey) {
-  alert(sortkey);
+  $.getJSON('/api/'+ sortkey, function(data) {
+    displayResults(data);
+  });
 }
 
-$('#name-sort').on('click', () => getAnimals('name'));
-function getAnimals(sortkey) {
-  alert(sortkey);
-}
+
 
 // We'll be rewriting the table's data frequently, so let's make our code more DRY
 // by writing a function that takes in data (JSON) and creates a table body
 function displayResults(data) {
+  $('tbody').empty();
   // Add to the table here...
+  const cols =['name', 'numblegs', 'class', 'weight', 'whatIWouldReallyCallIt'];
+  data.forEach((row) => {
+    const tr= $('<tr>');
+    cols.forEach((col) => tr.append($('<td>').text(row[col])));
+    $('tbody').append(tr);
+  });
 }
 
 $.getJSON('/api/all', function(data) {
