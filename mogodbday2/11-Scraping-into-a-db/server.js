@@ -37,12 +37,28 @@ app.get('/', function(req, res) {
 
 // Route 1
 // =======
+app.get('/data', function(req, res) {
+  res.send('Hello world');
+});
 // This route will retrieve all of the data
 // from the scrapedData collection as a json (this will be populated
 // by the data you scrape using the next route)
 
 // Route 2
 // =======
+app.get('/api/scrape', function(req, res) {
+  const data = await scrape();
+  db.scrapedData.insert(data,function(err,result){
+    res.json(result)
+  }
+});
+
+  // Log the results once you've looped through each of the elements found with cheerio
+  return(results);
+}
+
+
+
 // When you visit this route, the server will
 // scrape data from the site of your choice, and save it to
 // MongoDB.
