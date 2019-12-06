@@ -26,7 +26,9 @@ async function scrape() {
 
     // Make an object with data we scraped for this h4 and push it to the results array
     results.push({
-      title: title,
+      title: title.replace(/^\n\s+/, '').replace(/\n\s+$/, ''),
+
+
       link: link,
     });
   });
