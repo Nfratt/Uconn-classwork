@@ -27,7 +27,7 @@ $(document).on('click', '.markread', function() {
   const thisId = $(this).attr('data-id');
   $.ajax({
     type: 'PUT',
-    url: '/markread/' + thisId,
+    url: '/api/markread/' + thisId,
   });
   $(this).parents('tr').remove();
   getRead();
@@ -38,7 +38,7 @@ $(document).on('click', '.markunread', function() {
   const thisId = $(this).attr('data-id');
   $.ajax({
     type: 'PUT',
-    url: '/markunread/' + thisId,
+    url: '/api/markunread/' + thisId,
   });
   $(this).parents('tr').remove();
   getUnread();
@@ -50,7 +50,7 @@ $(document).on('click', '.markunread', function() {
 // Load unread books and render them to the screen
 function getUnread() {
   $('#unread').empty();
-  $.getJSON('/unread', function(data) {
+  $.getJSON('/api/unread', function(data) {
     for (let i = 0; i < data.length; i++) {
       $('#unread').prepend('<tr><td>' + data[i].title + '</td><td>' + data[i].author +
         '</td><td><button class=\'markread\' data-id=\'' + data[i]._id + '\'>Mark Read</button></td></tr>');
@@ -62,7 +62,7 @@ function getUnread() {
 // Load read books and render them to the screen
 function getRead() {
   $('#read').empty();
-  $.getJSON('/read', function(data) {
+  $.getJSON('/api/read', function(data) {
     for (let i = 0; i < data.length; i++) {
       $('#read').prepend('<tr><td>' + data[i].title + '</td><td>' + data[i].author +
         '</td><td><button class=\'markunread\' data-id=\'' + data[i]._id + '\'>Mark Unread</button></td></tr>');
