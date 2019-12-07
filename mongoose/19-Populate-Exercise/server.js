@@ -90,7 +90,19 @@ app.get('/populateduser', function(req, res) {
   // Write the query to grab the documents from the User collection,
   // and populate them with any associated Notes.
   // TIP: Check the models out to see how the Notes refers to the User
+  db.User.find({})
+  // Specify that we want to populate the retrieved libraries with any associated books
+      .populate('note')
+      .then(function(dbUser)
+      // If any Libraries are found, send them to the client with any associated Books
+        res.json(dbUser);
+      })
+      .catch(function(err) {
+      // If an error occurs, send it back to the client
+        res.json(err);
+      });
 });
+
 
 // Set the app to listen on PORT
 app.listen(PORT, function() {
