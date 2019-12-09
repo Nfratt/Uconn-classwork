@@ -54,11 +54,11 @@ app.get('/scrape', async function(req, res) {
     // Create a new Article using the `result` object built from scraping
     db.Article.create(result)
         .then(function(dbArticle) {
-          // View the added result in the console
+        // View the added result in the console
           console.log(dbArticle);
         })
         .catch(function(err) {
-          // If an error occurred, log it
+        // If an error occurred, log it
           console.log(err);
         });
   });
@@ -70,21 +70,47 @@ app.get('/scrape', async function(req, res) {
 // Route for getting all Articles from the db
 app.get('/api/articles', async function(req, res) {
   // TODO: Finish the route so it grabs all of the articles
-});
+  try {
+    const data = await db.Article.find({});
+    res.json(data);
+  } catch (err) {
+    res.status(500).json({error: {name: err.name, message: err.message}});
+  }
+},
+);
 
 // Route for grabbing a specific Article by id, populate it with it's note
 app.get('/api/articles/:id', async function(req, res) {
   // TODO
   // ====
-  // Finish the route so it finds one article using the req.params.id,
-  // and run the populate method with "note",
-  // then responds with the article with the note included
-});
+  try {
+    const data = await db.Article.findOne({_id: id})
+        .populate('note');
+
+    res.json(data);
+  } catch (err) {
+    res.status(500).json({error: {name: err.name, message: err.message}});
+  }
+},
+    // Finish the route so it finds one article using the req.params.id,
+    // and run the populate method with "note",
+    // then responds with the article with the note included
+);
 
 // Route for saving/updating an Article's associated Note
 app.post('/api/articles/:id', async function(req, res) {
   // TODO
   // ====
+try{
+  const dbNote = await db.Note.create(req.body);
+  {_id:req.params.Articleid},
+  {note:dbnote._id},
+  {new:true}
+};
+res.json(dbArticle);
+catch(err){
+  res.status(500).json({error: {name: err.name, message: err.message}});
+}
   // save the new note that gets posted to the Notes collection
   // then find an article from the req.params.id
   // and update it's "note" property with the _id of the new note
