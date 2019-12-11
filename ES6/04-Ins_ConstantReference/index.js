@@ -12,7 +12,6 @@ try {
 // ==========================================================================
 
 const name = "";
-
 try {
     name = "Cherie"; // TypeError: Assignment to constant variable.
   } catch (error) {

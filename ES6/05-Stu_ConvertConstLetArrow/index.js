@@ -3,7 +3,7 @@ const $root = document.querySelector("#root");
 let score;
 let targetScore;
 
-const makeGuess = function() {
+const makeGuess = ()=> {
   let $score = document.querySelector("#root p");
   $score.textContent = "Score: " + score + " | " + "Target: " + targetScore;
 
