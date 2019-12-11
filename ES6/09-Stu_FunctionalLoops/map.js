@@ -15,11 +15,15 @@ console.log(tripledArray)
 // 2. A map that takes the originalArray and returns a new array `oddOrEven`
 // containing the text "even" if the number is even and the text "odd" if the number is odd
 // i.e. using this map, the array [3, 1, 2, 4] should give us back ["odd", "odd", "even", "even"]
-const oddOrEven=originalArray.map(change=>{
-  if (change %2===0){
-    return 'even'+change;
-  }
-})
-// Your code here
 
+
+// Your code here
+const addOrEven = originalArray.map(change => {
+  if (change % 2 === 0) {
+    return "even " + change;
+  } else {
+    return "odd " + change;
+  }
+});
+console.log('addOrEven: ', addOrEven);
 // Bonus: Use arrow functions as callbacks!
