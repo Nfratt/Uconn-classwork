@@ -32,7 +32,8 @@ beatles.push("George");
 console.log(beatles); // Prints `["John", "Paul", "Ringo", "George"]`
 
 console.log(beatles);
-
+beatles.length==0
+// empties array
 const person = { name: "Brianna", age: 11 };
 person.age++;
 person.favoriteMovie = "Spider-Man";
