@@ -20,7 +20,7 @@ class Vehicle {
     this.logSpeed();
   }
 }
-
+// cars are a subclass of vehicle
 const vehicle = new Vehicle();
 
 vehicle.logSpeed();
