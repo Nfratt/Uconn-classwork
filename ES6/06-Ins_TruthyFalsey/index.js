@@ -34,12 +34,13 @@ console.log("" || [].length || 0);
 
 // 3.
 console.log('\n\n(3) ========================================================================== ');
-const likesVeggies = false;
+const likesVeggies = true;
 const meal = likesVeggies ? "Vegetable Stir Fry" : "Cheeseburger";
+// turnary
 console.log(meal);
 
 // 4.
 console.log('\n\n(4) ========================================================================== ');
-const feelingWell = false;
+const feelingWell = true;
 const goingOutTonight = feelingWell ? "Of course I'm going!" : "Not tonight, I'm not feeling well.";
 console.log(goingOutTonight);
