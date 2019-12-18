@@ -52,7 +52,7 @@ class OmdbContainer extends Component {
           <Col size="md-4">
             <Card heading="Search">
               <SearchForm
-                value={this.state.search}
+                searchterm={this.state.search}
                 handleInputChange={this.handleInputChange}
                 handleFormSubmit={this.handleFormSubmit}
               />
