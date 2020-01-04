@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from 'react-redux'
 import {Col, Row, Jumbotron} from 'react-bootstrap';
-import counter, { initialState } from "../redux/reducers/counter";
+
 
 
 
@@ -24,6 +24,8 @@ const Result = (props) => {
  * 
  * What arguments must you pass here?
  */
-export default connect(state =>({count:state.counter.count})
+export default connect(state =>
+  // mapStatetoProps
+  ({count:state.counter.count})
 
 )(Result);
