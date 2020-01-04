@@ -25,6 +25,8 @@ const Result = (props) => {
  * What arguments must you pass here?
  */
 export default connect(state =>
+  
+
   // mapStatetoProps
   ({count:state.counter.count})
 

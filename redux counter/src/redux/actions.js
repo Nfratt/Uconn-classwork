@@ -9,13 +9,10 @@ import { INCREMENT, DECREMENT } from "./actionTypes";
 
  // Fill in the properties that need to be returned
  // in each action
-export const onIncrementClick = (val) => ({
+export const onIncrementClick = () => ({
     type:INCREMENT,
-
 });
 
-export const onDecrementClick = (val) => ({
+export const onDecrementClick = () => ({
     type:DECREMENT,
-
-
 });
