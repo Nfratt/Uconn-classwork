@@ -1,13 +1,14 @@
 import React from "react";
 import { connect } from 'react-redux'
 import {Col, Row, Jumbotron} from 'react-bootstrap';
+import counter, { initialState } from "../redux/reducers/counter";
 
 
 
 const Result = (props) => {
     return <Jumbotron>
     <Row>
-      <Col className='text-center' style={{fontSize: '4rem'}}>[COUNT GOES HERE]</Col>
+      <Col className='text-center' style={{fontSize: '4rem'}}>{props.count}</Col>
     </Row>
   </Jumbotron>
 };
@@ -23,6 +24,6 @@ const Result = (props) => {
  * 
  * What arguments must you pass here?
  */
-export default connect(
+export default connect(state =>({count:state.counter.count})
 
 )(Result);

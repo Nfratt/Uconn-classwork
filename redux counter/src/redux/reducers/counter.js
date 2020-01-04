@@ -11,6 +11,12 @@ import { INCREMENT, DECREMENT } from "../actionTypes";
 export default function (state = initialState, action) {
     switch (action.type) {
         // ADD the case handlers for INCREMENT and DECREMENT
+        case INCREMENT:
+            return {...state,count:
+                state.count +1};
+        case DECREMENT:
+            return {...state,count:
+                state.count -1};
 
         default:
             return {

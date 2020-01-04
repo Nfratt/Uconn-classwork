@@ -10,9 +10,12 @@ import { INCREMENT, DECREMENT } from "./actionTypes";
  // Fill in the properties that need to be returned
  // in each action
 export const onIncrementClick = (val) => ({
+    type:INCREMENT,
 
 });
 
 export const onDecrementClick = (val) => ({
+    type:DECREMENT,
+
 
 });

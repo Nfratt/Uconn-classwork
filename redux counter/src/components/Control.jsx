@@ -9,8 +9,8 @@ const Control = (props) => {
     return <Jumbotron>
         <Row>
             {/* Fill in the onClick handlers.  What replaces null? */}
-            <Col className='text-center'><Button onClick={null}>+</Button></Col>
-            <Col className='text-center'><Button onClick={null}>-</Button></Col>
+            <Col className='text-center'><Button onClick={props.onIncrementClick}>+</Button></Col>
+            <Col className='text-center'><Button onClick={props.onDecrementClick}>-</Button></Col>
         </Row>
     </Jumbotron>
 };
@@ -26,6 +26,12 @@ const Control = (props) => {
  * 
  * What arguments must you pass here?
  */
+
+
 export default connect(
+    null,
+    {onIncrementClick,onDecrementClick
+    }
+
 
 )(Control);
