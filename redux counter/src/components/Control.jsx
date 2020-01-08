@@ -6,11 +6,12 @@ import { onIncrementClick, onDecrementClick } from '../redux/actions'
 
 
 const Control = (props) => {
+    
     return <Jumbotron>
         <Row>
             {/* Fill in the onClick handlers.  What replaces null? */}
             <Col className='text-center'><Button onClick={props.onIncrementClick}>+</Button></Col>
-            <Col className='text-center'><Button onClick={props.onDecrementClick}>-</Button></Col>
+            <Col className='text-center'><Button onClick={ props.onDecrementClick}>-</Button></Col>
         </Row>
     </Jumbotron>
 };

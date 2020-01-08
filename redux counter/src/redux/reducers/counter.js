@@ -13,10 +13,10 @@ export default function (state = initialState, action) {
         // ADD the case handlers for INCREMENT and DECREMENT
         case INCREMENT:
             return {...state,count:
-                state.count +1};
+                state.count +10};
         case DECREMENT:
             return {...state,count:
-                state.count -1};
+                state.count -10};
 
         default:
             return {
