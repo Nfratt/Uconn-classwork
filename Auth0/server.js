@@ -33,6 +33,7 @@ app.use(express.static(join(__dirname, "build")));
 
 // Define an endpoint that must be called with an access token
 app.get("/api/external", checkJwt, (req, res) => {
+  console.log(req.user)
   res.send({
     msg: "Your Access Token was successfully validated!"
   });

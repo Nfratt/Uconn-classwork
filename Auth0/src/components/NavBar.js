@@ -48,6 +48,18 @@ const NavBar = () => {
                   Home
                 </NavLink>
               </NavItem>
+              {isAuthenticated && (
+                <NavItem>
+                <NavLink
+                  tag={RouterNavLink}
+                  to="/external-api"
+                  exact
+                  activeClassName="router-link-exact-active"
+                >
+                  External API
+                </NavLink>
+                </NavItem>
+              )}
             </Nav>
             <Nav className="d-none d-md-block" navbar>
               {!isAuthenticated && (
@@ -131,6 +143,15 @@ const NavBar = () => {
                     activeClassName="router-link-exact-active"
                   >
                     Profile
+                  </RouterNavLink>
+                </NavItem>
+                <NavItem>
+                  <FontAwesomeIcon icon="user" className="mr-3" />
+                  <RouterNavLink
+                    to="/external-api"
+                    activeClassName="router-link-exact-active"
+                  >
+                    External API
                   </RouterNavLink>
                 </NavItem>
                 <NavItem>
