@@ -1,7 +1,11 @@
 // Benchmark is a library that times
 const Benchmark = require('benchmark');
-const generate = require('./generate');
 const platform = require('platform');
+
+const generate = require('./generate');
+const linearSearch = require('./linearSearch');
+const binarySearch = require('./binarySearch');
+
 
 // Generate an array of the given length.
 const length = 10000000;
@@ -14,13 +18,12 @@ const suite = new Benchmark.Suite();
 
 suite
 // Add the function 'linearSearch' to the suite.
-    .add('Linear Search', function linearSearch() {
-      for (let i = 0; i < stuff.length; i ++) {
-        if (stuff[i] === randomValue) {
-          return stuff[i];
-        }
-      }
-      return false;
+// .add("Linear Search", function search() {
+//   return linearSearch(stuff, randomValue);
+// })
+// Add the function 'binarySearch' to the suite.
+    .add('Binary Search', function search() {
+      return binarySearch(stuff, randomValue);
     })
 // On 'start', run the 'start' function.
     .on('start', function start() {
