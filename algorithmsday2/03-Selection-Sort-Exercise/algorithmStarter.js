@@ -30,11 +30,25 @@ function swap(items, firstIndex, secondIndex) {
 }
 
 function selectionSort(items) {
+  const len=items.length;
+  let min;
 
   // FILL IN YOUR CODE HERE
   // Use the above swap function when you are ready to start swapping elements in the array.
-
+for(var i=0; i< len ;i++){
+ min=i
+  for (var y = i + 1; y< len; y++) {
+    if (items[y] < items[min]) {
+     min=y
+    }
+  }
+if (i !== min ){
+  swap(items,i,min);
 }
+}
+return items
+}
+
 
 // ================================================
 // FUNCTION CALL
@@ -44,3 +58,29 @@ console.log(array.join(" "));
 console.log("---------------------------");
 console.log("POST-SORT");
 console.log(selectionSort(array).join(" "));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//   // swap
+//   if (i !== min) {
+//     swap(items, i, min);
+//   }
+// }
+// return items;
+// }
